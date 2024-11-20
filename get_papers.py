@@ -42,9 +42,12 @@ def process_papers(input_file, output_file):
             paper_ids.append(paper_info.get('paperId', 'N/A'))
             abstracts.append(paper_info.get('abstract', 'N/A'))
             embeddings = paper_info.get('embedding', 'N/A')
-            pdf_links.append(paper_info.get('openAccessPdf', {}).get('url', 'N/A'))
+            if paper_info.get('openAccessPdf'):
+                pdf_links.append(paper_info.get('openAccessPdf', {}).get('url', 'N/A'))
+            else:
+                pdf_links.append('N/A')
         else:
-            titles.append('N/A')
+            titles.append(title)
             paper_ids.append('N/A')
             abstracts.append('N/A')
             pdf_links.append('N/A')
