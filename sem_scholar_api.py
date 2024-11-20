@@ -65,6 +65,7 @@ def get_paper(paper_title):
     if response.status_code == 200:
         response_data = response.json()['data'][0]
         print('get paper embedding')
+        time.sleep(2)
         embedding = get_paper_embedding(response_data['paperId'])
         if embedding:
             response_data['embedding'] = embedding
