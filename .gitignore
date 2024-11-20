@@ -1,2 +1,5 @@
-graph based re-id.xlsx
 *pyc
+*.xlsx
+*.csv
+*.png
+*.json

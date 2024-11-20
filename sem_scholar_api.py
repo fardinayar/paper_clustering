@@ -5,8 +5,8 @@ import torch
 import re
 
 # Load BERT model and tokenizer
-tokenizer = AutoTokenizer.from_pretrained('bert-base-uncased')
-model = AutoModel.from_pretrained('bert-base-uncased')
+tokenizer = AutoTokenizer.from_pretrained("globuslabs/ScholarBERT")
+model = AutoModel.from_pretrained("globuslabs/ScholarBERT")
 
 def get_bert_embedding(text):
     """

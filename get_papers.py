@@ -55,7 +55,7 @@ def process_papers(input_file, output_file):
         }
 
         if paper_info:
-            result['Retrieved Title'] = paper_info.get('title', 'N/A')
+            result['Retrieved Title'] = title
             result['Paper ID'] = paper_info.get('paperId', 'N/A')
             result['Abstract'] = paper_info.get('abstract', 'N/A')
             result['Embedding'] = paper_info.get('embedding', 'N/A')
